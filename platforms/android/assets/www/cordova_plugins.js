@@ -46,6 +46,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.flashlight"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -56,7 +64,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
     "cordova-plugin-whitelist": "1.1.0",
-    "nl.x-services.plugins.flashlight": "2.0.4"
+    "nl.x-services.plugins.flashlight": "2.0.4",
+    "cordova-plugin-vibration": "1.2.0"
 }
 // BOTTOM OF METADATA
 });

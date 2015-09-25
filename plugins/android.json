@@ -27,6 +27,10 @@
                         {
                             "xml": "<feature name=\"Flashlight\"><param name=\"android-package\" value=\"nl.xservices.plugins.Flashlight\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -36,6 +40,10 @@
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ]
@@ -60,6 +68,9 @@
             "PACKAGE_NAME": "com.ionicframework.ionicmorse985715"
         },
         "nl.x-services.plugins.flashlight": {
+            "PACKAGE_NAME": "com.ionicframework.ionicmorse985715"
+        },
+        "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.ionicframework.ionicmorse985715"
         }
     },

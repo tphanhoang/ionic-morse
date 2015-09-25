@@ -46,6 +46,8 @@
 		4EB0C6ECB55C4EB9A44E356F /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC0161426C14BE88FABE03F /* CDVSplashScreen.m */; };
 		8C0754A47AC047C9AE1BCF1D /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A638EC590374EC4A748AD42 /* CDVViewController+SplashScreen.m */; };
 		F60C51CD90F646069ED87BF6 /* Flashlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E3A6883444D0CA64A4D9F /* Flashlight.m */; };
+		CBF7FECE2AA9420CB6DF9DEE /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4252054169420A8A64438F /* CDVVibration.m */; };
+		1868E70FD86947FF92E44D2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8DD02B508A439E92F0F7C7 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,9 @@
 		8DCD86CC9D6E4E678D1BF1BC /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		7D2E3A6883444D0CA64A4D9F /* Flashlight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Flashlight.m"; path = "nl.x-services.plugins.flashlight/Flashlight.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		623F4FC0EC594127BEFB4416 /* Flashlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Flashlight.h"; path = "nl.x-services.plugins.flashlight/Flashlight.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AA4252054169420A8A64438F /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		25D4471376974486BE7C029F /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "cordova-plugin-vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5C8DD02B508A439E92F0F7C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				1868E70FD86947FF92E44D2B /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +214,7 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				5C8DD02B508A439E92F0F7C7 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,6 +244,8 @@
 				8DCD86CC9D6E4E678D1BF1BC /* CDVViewController+SplashScreen.h */,
 				7D2E3A6883444D0CA64A4D9F /* Flashlight.m */,
 				623F4FC0EC594127BEFB4416 /* Flashlight.h */,
+				AA4252054169420A8A64438F /* CDVVibration.m */,
+				25D4471376974486BE7C029F /* CDVVibration.h */,
 			);
 			name = Plugins;
 			path = "ionic-morse/Plugins";
@@ -428,6 +437,7 @@
 				4EB0C6ECB55C4EB9A44E356F /* CDVSplashScreen.m in Sources */,
 				8C0754A47AC047C9AE1BCF1D /* CDVViewController+SplashScreen.m in Sources */,
 				F60C51CD90F646069ED87BF6 /* Flashlight.m in Sources */,
+				CBF7FECE2AA9420CB6DF9DEE /* CDVVibration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
