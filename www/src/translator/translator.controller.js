@@ -5,8 +5,9 @@ angular.module('morse')
 
     var vm = this;
 
-    vm.tentative = function () {
-        Translator.translate(1,"prout")
+    vm.translate = function (formatOutput, morseInput) {    	
+    	
+        Translator.translate(formatOutput,morseInput)
     };
 
 });
