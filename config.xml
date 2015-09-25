@@ -17,4 +17,16 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <!-- for iOS -->
+  <feature name="Flashlight">
+    <param name="ios-package" value="Flashlight" />
+  </feature>
+  <!-- for Android -->
+  <feature name="Flashlight">
+    <param name="android-package" value="nl.xservices.plugins.Flashlight" />
+  </feature>
+  <!-- for WP8 -->
+  <feature name="Flashlight">
+    <param name="wp-package" value="Flashlight" />
+  </feature>
 </widget>

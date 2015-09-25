@@ -39,6 +39,13 @@ module.exports = [
         "file": "plugins/cordova-plugin-whitelist/whitelist.js",
         "id": "cordova-plugin-whitelist.whitelist",
         "runs": true
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.flashlight/www/Flashlight.js",
+        "id": "nl.x-services.plugins.flashlight.Flashlight",
+        "clobbers": [
+            "window.plugins.flashlight"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -48,7 +55,8 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.1",
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
-    "cordova-plugin-whitelist": "1.1.0"
+    "cordova-plugin-whitelist": "1.1.0",
+    "nl.x-services.plugins.flashlight": "2.0.4"
 }
 // BOTTOM OF METADATA
 });

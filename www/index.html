@@ -15,19 +15,23 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/plugins/Flashlight.js"></script>
 
     <!-- your app's js -->
     <script src="src/app.js"></script>
+    <script src="src/test/flashlight.controller.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="TestFlashCtrl as test">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content class="has-header">
+        <button class="button button-full button-assertive" ng-click="test.toggle()">Toggle</button>
       </ion-content>
     </ion-pane>
   </body>
