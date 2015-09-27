@@ -22,15 +22,43 @@
 
     <!-- your app's js -->
     <script src="src/app.js"></script>
-    <script src="src/test/vibration.controller.js"></script>
+    <script src="src/translator/translator.controller.js"></script>
+    <script src="src/translator/translator.service.js"></script>
   </head>
+<<<<<<< HEAD
   <body ng-app="morse" ng-controller="TestVibrationCtrl as test">
+=======
+  <body ng-app="morse" ng-controller="TranslatorCtrl as morse">
+>>>>>>> morse-translate
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Morse Translator</h1>
       </ion-header-bar>
       <ion-content class="has-header">
+      
+
+    
+      <div class="list list-inset">
+        <label class="item item-input">
+          <textarea placeholder="Message à traduire // SOS par défaut !" ng-model="morse.morseInput" ng-change="morse.translate([],morse.morseInput)"></textarea>
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Message à traduit" ng-model="morse.morseOutput"></textarea>
+        </label>
+      </div>
+
+      <div class="row">
+         <div class="col text-center"> 
+          <button class="button button-large button-positive" ng-click="morse.vibrationTranslate(morse.morseInput)">
+            Vibreur 
+          </button> 
+          <button class="button button-large button-calm" ng-click="morse.flashLightTranslate(morse.morseInput)">
+            Traduire 
+          </button> 
+        </div>
+      </div>
+
       </ion-content>
     </ion-pane>
   </body>
