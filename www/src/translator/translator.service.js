@@ -59,6 +59,7 @@ angular.module('morse')
     		
 	        var result = [];	        
 
+	        	morseInput = morseInput ==null ? "sos" : morseInput;
 	        	slug = morseInput.toLowerCase();
 
 				// remove accents, swap ñ for n, etc (and ' " to space )
@@ -88,10 +89,10 @@ angular.module('morse')
 	        }
 		    		    
 		    if(params['format'] == null){	        			    
-		    	return result;
+		    	return result.toString().replace(/,/g,'');
 			}
 
-			if(params['format'] == 'vibrate'){
+			if(params['format'] == 'time'){
 				result = result.toString().replace(/, ,/g,'xxx').replace(/,/g,'').replace(/ /g,'').replace(/·/g,'250,250,').replace(/−/g,'750,250,').replace(/,250,xxx/g,',1750,');
 		    	return result.substring(0,result.length-1);
 			}

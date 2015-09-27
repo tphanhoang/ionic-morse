@@ -37,7 +37,7 @@
     
       <div class="list list-inset">
         <label class="item item-input">
-          <textarea placeholder="Message à traduire" ng-model="morse.morseInput" ng-change="morse.translate([],morse.morseInput)"></textarea>
+          <textarea placeholder="Message à traduire // SOS par défaut !" ng-model="morse.morseInput" ng-change="morse.translate([],morse.morseInput)"></textarea>
         </label>
         <label class="item item-input">
           <textarea placeholder="Message à traduit" ng-model="morse.morseOutput"></textarea>
@@ -46,10 +46,10 @@
 
       <div class="row">
          <div class="col text-center"> 
-          <button class="button button-large button-positive" ng-click="morse.translate(['vibrate'],morse.morseInput)">
-            Traduire 
+          <button class="button button-large button-positive" ng-click="morse.vibrationTranslate(morse.morseInput)">
+            Vibreur 
           </button> 
-          <button class="button button-large button-calm" ng-click="morse.translate([],morse.morseInput)">
+          <button class="button button-large button-calm" ng-click="morse.flashLightTranslate(morse.morseInput)">
             Traduire 
           </button> 
         </div>
