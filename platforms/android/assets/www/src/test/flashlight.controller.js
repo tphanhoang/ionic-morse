@@ -1,5 +1,5 @@
 
-angular.module('starter')
+angular.module('morse')
 
 .controller('TestFlashCtrl', function () {
 

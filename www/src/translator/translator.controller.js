@@ -16,8 +16,11 @@ angular.module('morse')
     vm.vibrationTranslate = function(morseInput) {
     	formatOutput = [];
     	formatOutput['format'] = 'time';    	
-        vm.morseOutput = Translator.translate(formatOutput,morseInput);        
-        // console.log(vm.morseOutput);
+        msgArray = Translator.translate(formatOutput,morseInput).split(',');        
+        
+        //console.log(msgArray);
+        navigator.vibrate(msgArray);
+
     };
 
     vm.flashLightTranslate = function(morseInput) {
