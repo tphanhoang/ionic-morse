@@ -22,10 +22,9 @@ angular.module('morse')
 
     vm.flashLightTranslate = function(morseInput) {
     	formatOutput = [];
-    	formatOutput['format'] = 'time';
-    	vm.morseOutput = Translator.translate(formatOutput,morseInput)
+    	formatOutput['format'] = 'time';    	
     	 
-    	msgArray = vm.morseOutput.split(',');
+    	msgArray = Translator.translate(formatOutput,morseInput).split(',');
 
 		var i = 0;
 		var trait = 0;		
