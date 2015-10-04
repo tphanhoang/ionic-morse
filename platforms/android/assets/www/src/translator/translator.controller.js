@@ -12,13 +12,16 @@ angular.module('morse')
     };
 
 
+/*
+Transforme le message input en bon format pour le vibreur : un array de temps en microseconde [xxx1,yyy1,xxx2,yyy2, ...] : xxx étant le temps où le vibreur sera actif et yyy le temps où le vibreur sera inactif
+*/
 
     vm.vibrationTranslate = function(morseInput) {
     	formatOutput = [];
     	formatOutput['format'] = 'time';    	
         msgArray = Translator.translate(formatOutput,morseInput).split(',');        
         
-        console.log(msgArray);
+        //console.log(msgArray);
         navigator.vibrate(msgArray);
 
     };
@@ -33,6 +36,10 @@ angular.module('morse')
 		var trait = 0;		
 		var flash_actived = false;
 		var space = 0;
+
+/*
+L'utilisation de setInterval est la seul facon que j'ai trouvé afin d'utiliser la flashlight correctement. Théoriquement, toutes les 500 ms, le script verifie la signe à transcrire et vérifie des variables pour voir s'il est nécessaire d'allumer la lumiere ou de l'eteindre ou d'attendre en ne changeant pas l'état de la flashlight.
+*/
 
 		var runner = setInterval(function(){			
 			if(i<msgArray.length){				

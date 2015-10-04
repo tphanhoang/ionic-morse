@@ -19,18 +19,21 @@
 
 
     <script src="src/app.js"></script>
+    <script src="src/common/nav.controller.js"></script>    
     <script src="src/translator/translator.controller.js"></script>
     <script src="src/translator/translator.service.js"></script>
+    <script src="src/translator/morse.json"></script>
   </head>
 
-  <body ng-app="morse" ng-controller="TranslatorCtrl as morse">
+<body ng-app="morse" ng-controller="NavCtrl as nav">
+  
 
 
     <ion-pane>
       <ion-header-bar class="bar-stable bar-royal">
         <h1 class="title">Morse Translator</h1>
       </ion-header-bar>
-      <ion-content class="has-header">      
+      <ion-content class="has-header" ng-controller="TranslatorCtrl as morse">      
 
       <div class="row">
         <div class="col text-center">
@@ -58,7 +61,11 @@
         </div>
       </div>
 
+
       </ion-content>
     </ion-pane>
+
+ <button ng-click="modal.show()" class="round-overlay-button bottom-right assertive button button-icon icon ion-ios7-search-strong ion-help light"></button>
+
   </body>
 </html>

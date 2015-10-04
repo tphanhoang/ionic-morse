@@ -1,0 +1,19 @@
+<div class="modal">
+	<ion-header class="bar bar-header bar-positive">
+	  <h1 class="title">Morse Helper</h1>
+	  <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+	</ion-header>
+
+	<ion-content class="has-header" ng-controller="ModalCtrl as morse">
+		<p class="item">
+			Voici le code Morse !
+		</p>
+
+	  	<ul>
+		<li class="item" ng-repeat="(key,value) in morse.morse" >
+			"{{key}}" : {{value}}
+		</li>
+	</ul>
+	</ion-content>
+
+</div>
