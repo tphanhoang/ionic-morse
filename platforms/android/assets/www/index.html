@@ -19,15 +19,14 @@
 
 
     <script src="src/app.js"></script>
-    <script src="src/common/nav.controller.js"></script>
-    <script src="src/common/modal/modal.controller.js"></script>
+    <script src="src/common/nav.controller.js"></script>    
     <script src="src/translator/translator.controller.js"></script>
     <script src="src/translator/translator.service.js"></script>
     <script src="src/translator/morse.json"></script>
   </head>
 
 <body ng-app="morse" ng-controller="NavCtrl as nav" class="platform-android platform-cordova platform-webview">
-  <!-- <body ng-app="morse" ng-controller="TranslatorCtrl as morse"> -->
+  
 
 
     <ion-pane>
@@ -47,7 +46,7 @@
           <textarea placeholder="Message à traduire // SOS par défaut !" ng-model="morse.morseInput" ng-change="morse.translate([],morse.morseInput)"></textarea>
         </label>
         <label class="item item-input">
-          <textarea placeholder="Message à traduit" ng-model="morse.morseOutput"></textarea>
+          <textarea readonly placeholder="Message à traduit" ng-model="morse.morseOutput"></textarea>
         </label>
       </div>
 
@@ -56,23 +55,40 @@
           <button class="button button-large button-positive" ng-click="morse.vibrationTranslate(morse.morseInput)">
             Vibreur 
           </button> 
-          <button class="button button-large button-calm" ng-click="morse.flashLightTranslate(morse.morseInput)">
+          <button class="button button-large button-assertive" ng-click="morse.flashLightTranslate(morse.morseInput)">
             Flashlight 
           </button> 
         </div>
       </div>
+  
+    
+        
+        <button class="icon ion-qr-scanner scan-button button button-full " ng-click="morse.scanBarcode()"> Scan QRCode</button>
 
+    
+       
 <ion-list>
-  <ion-item>
-    I love kittens!
-    <ion-option-button class="button-positive">Share</ion-option-button>
-    <ion-option-button class="button-assertive">Edit</ion-option-button>
+  <ion-item ng-click="morse.morseInput = 'Hello World !';morse.translate([],morse.morseInput)">
+    Hello World !
+    <ion-option-button class="button-positive" ng-click="morse.vibrationTranslate('Hello World !')">Vibreur</ion-option-button>
+    <ion-option-button class="button-assertive"  ng-click="morse.flashLightTranslate('Hello World !')">Flashlight</ion-option-button>
+  </ion-item>
+  <ion-item ng-click="morse.morseInput = 'Supdeweb !';morse.translate([],morse.morseInput)">
+    Supdeweb
+    <ion-option-button class="button-positive" ng-click="morse.vibrationTranslate('Supdeweb')">Vibreur</ion-option-button>
+    <ion-option-button class="button-assertive"  ng-click="morse.flashLightTranslate('Supdeweb')">Flashlight</ion-option-button>
+  </ion-item>
+  <ion-item ng-click="morse.morseInput = 'YOLO';morse.translate([],morse.morseInput)">
+    YOLO
+    <ion-option-button class="button-positive" ng-click="morse.vibrationTranslate('YOLO')">Vibreur</ion-option-button>
+    <ion-option-button class="button-assertive"  ng-click="morse.flashLightTranslate('YOLO')">Flashlight</ion-option-button>
   </ion-item>
 </ion-list>
       </ion-content>
     </ion-pane>
 
  <button ng-click="modal.show()" class="round-overlay-button bottom-right assertive button button-icon icon ion-ios7-search-strong ion-help light"></button>
+
 
   </body>
 </html>

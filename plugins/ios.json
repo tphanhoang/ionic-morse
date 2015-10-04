@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -46,6 +50,46 @@
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
+                            "count": 1
+                        },
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libiconv.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AVFoundation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreVideo.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreImage.framework": [
+                        {
+                            "xml": false,
                             "count": 1
                         }
                     ]
@@ -70,6 +114,9 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.ionicframework.ionicmorse985715"
+        },
+        "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.ionicmorse985715"
         }
     },

@@ -1,7 +1,8 @@
 
 angular.module('morse')
 
-.controller('TranslatorCtrl', function (Translator) {
+
+.controller('TranslatorCtrl', function (Translator, $cordovaBarcodeScanner, $scope) {
 
     var vm = this;
 
@@ -11,6 +12,21 @@ angular.module('morse')
         // console.log(vm.morseOutput);
     };
 
+
+	vm.scanBarcode = function() {
+
+		
+        $cordovaBarcodeScanner.scan().then(function(imageData) {
+            
+        	vm.morseInput = imageData.text;
+        	vm.translate([],imageData.text);
+
+            console.log("Barcode Format -> " + imageData.format);
+            console.log("Cancelled -> " + imageData.cancelled);
+        }, function(error) {
+            console.log("An error happened -> " + error);
+        });
+    };
 
 /*
 Transforme le message input en bon format pour le vibreur : un array de temps en microseconde [xxx1,yyy1,xxx2,yyy2, ...] : xxx étant le temps où le vibreur sera actif et yyy le temps où le vibreur sera inactif
@@ -95,5 +111,7 @@ L'utilisation de setInterval est la seul facon que j'ai trouvé afin d'utiliser 
 
 		}, 500);
 
-}
-});
+
+ 
+}})
+
