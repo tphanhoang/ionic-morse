@@ -42,3 +42,19 @@ La mise en place et l'utilisation de la flashlight a été plus compliqué que p
 
 Le vibreur à été plus since à mettre en place (utilisation de :  [$cordovaVibration](https://github.com/driftyco/ng-cordova/blob/master/src/plugins/vibration.js).
 
+
+
+
+
+Ajouts depuis la 1ère release 
+--------------------
+
+* Lecture de QR code, intégrant le texte aux endroits prévu à cette effet
+* Implémentation d'une modal d'aide
+* Implémentation d'une liste d'items avec des options
+
+
+
+test pour le qr code : 
+
+![Ionic morse logo](https://github.com/tphanhoang/ionic-morse/blob/master/www/img/qrCode.png?raw=true "ionic morse")
